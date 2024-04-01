@@ -1,2 +1,2 @@
-from nginx
-copy . /usr/share/nginx/html/
+from tomcat
+copy /root/maven-project/webapp/target/webapp.war /usr/local/tomcat
