@@ -1,5 +1,5 @@
-FROM tomcat:latest
-RUN rm -rf /usr/local/tomcat/webapps/*
-COPY *.war /usr/local/tomcat/
+FROM java:latest
+ADD /root/maven-project/webapp/target/webapp.war /usr/local/tomcat/
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD ["java","-jar","jenkins.war"]
+
